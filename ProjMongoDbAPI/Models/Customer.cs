@@ -3,7 +3,7 @@ using MongoDB.Bson;
 
 namespace ProjMongoDbAPI.Models
 {
-    public class Costumer
+    public class Customer
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]

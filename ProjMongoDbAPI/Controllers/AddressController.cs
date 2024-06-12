@@ -31,6 +31,11 @@ namespace ProjMongoDbAPI.Controllers
             }
             return address;
         }
+        [HttpGet("{cep:length(8)}")]
+        public  ActionResult<AddressDTO> GetPostOffice(string cep)
+        {
+            return  PostOfficeService.GetAddress(cep).Result;
+        }
 
         [HttpPost]
         public ActionResult<Address> Create(Address address)
